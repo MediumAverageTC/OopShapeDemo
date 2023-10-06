@@ -38,6 +38,15 @@ namespace OopShapeTest
             RegularShape2DShape myShape = new Circle(3);
             double area = myShape.area();
             Assert.AreEqual(28.27) Math.round(area, 2, MidpointRounding.AwayFromZero));
+
+        [TestCategory("Hexagon.cs")]
+        [TestMethod]
+        // Test Icosagons can calculate area correctly.
+        public void HexagonAreaTest()
+        {
+            Regular2DShape myShape = new Hexagon(5);
+            double area = myShape.Area();
+            Assert.AreEqual(64.95, Math.Round(area, 2, MidpointRounding.AwayFromZero)); // Google checker only does to 2 D.P.
         }
     }
 }

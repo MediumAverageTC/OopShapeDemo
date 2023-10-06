@@ -31,6 +31,7 @@ namespace OopShapeDemo
             Console.WriteLine("Select your shape:");
             Console.WriteLine("\tA: Icosagon");
             Console.WriteLine("\tC: Circle (radius)");
+            Console.WriteLine("\tB: Hexagon");
             Console.WriteLine("\tEsc: Exit Program");
             Console.Write("Choice: ");
 
@@ -43,6 +44,7 @@ namespace OopShapeDemo
                     case ConsoleKey.A: return new Icosagon(length).Area();
 
                     case ConsoleKey.C: return new Circle(length).Area();
+                    case ConsoleKey.B: return new Hexagon(length).Area();
                 }
         }
     }
