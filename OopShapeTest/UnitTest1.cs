@@ -31,5 +31,15 @@ namespace OopShapeTest
         {
             Assert.ThrowsException<ArgumentException>(() => { new Icosagon(-1); }, "Shape did not throw expected arguement when negative value passed to constructor..");
         }
+
+        [TestCategory("Square.cs")]
+        [TestMethod]
+        // Test Squares can calculate area correctly.
+        public void SquareAreaTest()
+        {
+            Regular2DShape myShape = new Square(5);
+            double area = myShape.Area();
+            Assert.AreEqual(25, Math.Round(area, 2, MidpointRounding.AwayFromZero)); // Google checker only does to 2 D.P.
+        }
     }
 }
