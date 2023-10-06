@@ -31,5 +31,15 @@ namespace OopShapeTest
         {
             Assert.ThrowsException<ArgumentException>(() => { new Icosagon(-1); }, "Shape did not throw expected arguement when negative value passed to constructor..");
         }
+
+        [TestCategory("Hexagon.cs")]
+        [TestMethod]
+        // Test Icosagons can calculate area correctly.
+        public void HexagonAreaTest()
+        {
+            Regular2DShape myShape = new Hexagon(5);
+            double area = myShape.Area();
+            Assert.AreEqual(64.95, Math.Round(area, 2, MidpointRounding.AwayFromZero)); // Google checker only does to 2 D.P.
+        }
     }
 }
